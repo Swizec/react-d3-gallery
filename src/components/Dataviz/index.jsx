@@ -27,7 +27,7 @@ class Dataviz extends Component {
                         {value: didnt_get, label: "Fail"}];
 
         let jobTitles = _.groupBy(this.props.data,
-                                  (d) => d.job_title),
+                                  (d) => d.employer),
             pieData = Object.keys(jobTitles)
                             .map((k) => { return {
                                 value: jobTitles[k].length,
