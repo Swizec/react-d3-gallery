@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import SpaceInvaders from '../../../modules/space-invaders/src/components/SpaceInvaders';
+import SpaceInvaders from '../../../modules/space-invaders/src/components/SpaceInvaders'
 
 const SpaceInvadersPage = ({width, height}) => {
     return (
