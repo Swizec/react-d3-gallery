@@ -16,11 +16,23 @@ class Carousel extends Component {
     }
 
     goLeft() {
-        this.setState({page: this.state.page-1})
+        let page = this.state.page-1;
+
+        if (page < 0) {
+            page = this.state.components.length-1;
+        }
+
+        this.setState({page: page})
     }
 
     goRight() {
-        this.setState({page: this.state.page+1})
+        let page = this.state.page+1;
+
+        if (page >= this.state.components.length) {
+            page = 0;
+        }
+
+        this.setState({page: page})
     }
 
     render() {
