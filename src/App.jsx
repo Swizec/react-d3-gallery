@@ -7,15 +7,18 @@ import Gallery from './components/Gallery';
 class App extends Component {
     constructor() {
         super();
-
-        this.state = {rawData: []};
     }
 
     render() {
-        let data = this.state.rawData;
+        let urls = ['http://swizec.github.io/space-invaders/',
+                    'http://swizec.github.io/h1b-software-salaries',
+                    'http://swizec.github.io/react-particles-experiment',
+                    'http://swizec.github.io/flux-testing/',
+                    'http://swizec.github.io/react-testing-example/',
+                    'http://swizec.github.io/candidate-bucket-chart/'];
 
         return (
-            <Gallery />
+            <Gallery urls={urls} />
         );
     }
 }
