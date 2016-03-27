@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import d3 from 'd3';
 
-import Carousel from './components/Carousel';
+import Gallery from './components/Gallery';
 
 class App extends Component {
     constructor() {
@@ -15,7 +15,7 @@ class App extends Component {
         let data = this.state.rawData;
 
         return (
-            <Carousel />
+            <Gallery />
         );
     }
 }
