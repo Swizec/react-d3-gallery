@@ -2,15 +2,13 @@
 import React, { Component } from 'react';
 import { Carousel, CarouselItem } from 'react-bootstrap';
 
-import ParticlesPage from './ParticlesPage';
-import SpaceInvadersPage from './SpaceInvadersPage';
-import H1BPage from './H1BPage';
-
 const GalleryPage = (page, i) => (
     <CarouselItem key={`galleryPage-${i}`}
                   className="text-center"
-                  style={{height: '600px', overflow: 'scroll'}}>
-        {React.createElement(page, null)}
+                  style={{height: '600px'}}>
+        <iframe src={page}
+                style={{height: '600px', width: '800px',
+                        border: '0px'}} />
     </CarouselItem>
 );
 
@@ -21,9 +19,12 @@ class Gallery extends Component {
         this.state = {
             index: 0,
             direction: null,
-            components: [ParticlesPage,
-                         SpaceInvadersPage,
-                         H1BPage]
+            examples: ['http://swizec.github.io/space-invaders/',
+                       'http://swizec.github.io/h1b-software-salaries',
+                       'http://swizec.github.io/react-particles-experiment',
+                       'http://swizec.github.io/flux-testing/',
+                       'http://swizec.github.io/react-testing-example/',
+                       'http://swizec.github.io/candidate-bucket-chart/']
         };
     }
 
@@ -35,13 +36,11 @@ class Gallery extends Component {
     }
 
     render() {
-        let page = this.state.components[this.state.page];
-
         return (
             <Carousel activeIndex={this.state.index}
-                                direction={this.state.direction}
-                                onSelect={::this.handleSelect}>
-                {this.state.components.map(GalleryPage)}
+                      direction={this.state.direction}
+                      onSelect={::this.handleSelect}>
+                {this.state.examples.map(GalleryPage)}
             </Carousel>
         );
     }
