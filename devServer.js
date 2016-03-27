@@ -15,6 +15,7 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 // enable loading local static files
 app.use(express.static('public'));
+app.use('/modules', express.static('modules'));
 
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));

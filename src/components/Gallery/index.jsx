@@ -4,11 +4,12 @@ import { Carousel, CarouselItem } from 'react-bootstrap';
 
 import ParticlesPage from './ParticlesPage';
 import SpaceInvadersPage from './SpaceInvadersPage';
+import H1BPage from './H1BPage';
 
 const GalleryPage = (page, i) => (
     <CarouselItem key={`galleryPage-${i}`}
                   className="text-center"
-                  style={{height: '600px'}}>
+                  style={{height: '600px', overflow: 'scroll'}}>
         {React.createElement(page, null)}
     </CarouselItem>
 );
@@ -21,7 +22,8 @@ class Gallery extends Component {
             index: 0,
             direction: null,
             components: [ParticlesPage,
-                         SpaceInvadersPage]
+                         SpaceInvadersPage,
+                         H1BPage]
         };
     }
 
