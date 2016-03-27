@@ -1,7 +1,7 @@
 {
-  "name": "livecoding-project",
+  "name": "react-examples-gallery",
   "version": "1.0.0",
-  "description": "The description of a livecoding project, which shows stuff and visualizations in React and d3.",
+  "description": "A generic examples gallery component. It uses iframes to show off things.",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -51,15 +51,11 @@
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
-    "webpack-hot-middleware": "^2.6.0"
+    "webpack-hot-middleware": "^2.6.0",
+    "react-dom": "^0.14.3"
   },
   "dependencies": {
-    "d3": "^3.5.16",
-    "lodash": "^4.6.1",
     "react": "^0.14.3",
-    "react-bootstrap": "^0.28.4",
-    "react-dom": "^0.14.3",
-    "react-redux": "^4.4.1",
-    "redux": "^3.3.1"
+    "react-bootstrap": "^0.28.4"
   }
 }
