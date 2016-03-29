@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 import { Carousel, CarouselItem } from 'react-bootstrap';
 
-const GalleryPage = (url, i, height) => (
+const GalleryPage = (url, i, height, carouselIndex) => (
     <CarouselItem key={`galleryPage-${i}`}
                   className="text-center">
-        <iframe src={url}
+        <iframe src={carouselIndex == i ? url : ''}
                 style={{height: height, width: '800px',
                         border: '0px'}} />
     </CarouselItem>
@@ -36,7 +36,7 @@ class Gallery extends Component {
                       onSelect={::this.handleSelect}
                       style={{height: height}}>
                 {this.props.urls.map(
-                    (url, i) => GalleryPage(url, i, height))}
+                    (url, i) => GalleryPage(url, i, height, this.state.index))}
             </Carousel>
         );
     }
