@@ -1,6 +1,6 @@
 {
   "name": "react-examples-gallery",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A generic examples gallery component. It uses iframes to show off things.",
   "scripts": {
     "clean": "rimraf dist",
@@ -9,7 +9,7 @@
     "start": "node devServer.js",
     "lint": "eslint src"
   },
-  "main" : "src/index.jsx",
+  "main": "src/index.jsx",
   "repository": {
     "type": "git",
     "url": ""
