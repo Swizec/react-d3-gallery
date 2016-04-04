@@ -6,7 +6,7 @@ const GalleryPage = (url, i, height, carouselIndex) => (
     <CarouselItem key={`galleryPage-${i}`}
                   className="text-center">
         <iframe src={carouselIndex == i ? url : ''}
-                style={{height: height, width: '800px',
+                style={{height: height, width: '70%',
                         border: '0px'}} />
     </CarouselItem>
 );
